@@ -1,0 +1,19 @@
+main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+@media only screen and (min-width: 990px) { 
+    main {
+        grid-column: 2 / span 1;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    main section {
+        grid-column: 1 / span 1;
+    }
+
+    main aside {
+        grid-column: 2 / span 1;
+    }
+}

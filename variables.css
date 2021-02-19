@@ -22,4 +22,13 @@
     --text-color: #444;
     --text-color-light: #999;
     --border-color: #E6E6E6;
+
+/* Unfortunately CSS does not support var in a media query definition 
+
+@media only screen and (min-width: 1200px) { }
+@media only screen and (min-width: 768px) { }
+@media only screen and (min-width: 768px) { }
+
+*/
+
 }

@@ -1,121 +1,29 @@
-/* justify-self: end; */
-header.page-header {
-    display: grid;
-    grid-template-columns: fr;
-    grid-template-rows: 3em auto;
-}
-
+/* this was done for troubleshooting I will probably merge these back soon */
+@import url('page-header-layout.css');
 .logo {
-    text-align: center;
-    /* grid-area: logo; */
     background-color:var(--gray-dark);
     color: var(--brand-second);
-}
-
-.logo h1 {
-    font-size: 1rem;
 }
 
 .nav-top, .nav, .nav-bottom {
     background-color: var(--brand-primary);
 }
 
-.nav-bottom, .nav-top {
-    display:none;
-    visibility: hidden;
+.bio {
+    background-image: url('https://edcharbeneau.com/img/ed-speaking1.jpg');
+    border-bottom-left-radius: 1em;
 }
 
-.nav {
-    padding: 0.5rem;
-    border-bottom-left-radius: 1rem;
-}
-
-@media only screen and (min-width: 768px) {
-    header.page-header {
-        grid-column: span 12;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 40px 40px 40px 260px;
-    }
-    
-    .logo {
-        padding-left: 1em;
-        padding-right: 1em;
-        text-align: left;
-        grid-column: 1 / span 5;
-        grid-row: 1 / span 2;
-    }
-
-    .logo h1 {
-        font-size: 2em;
-    }
-    
-    .nav-bottom, .nav-top {
-        display: block;
-        visibility: visible;
-    }
-    .nav-top {
-        grid-column: 6 / span 12;
-        grid-row: 1 / span 1;
-    }
-    .nav {
-        grid-column: 6 / span 12;
-        grid-row: 2 / span 1;
-        border-radius: 0;
-    }
-    .nav-bottom {
-        grid-column: 6 / span 12;
-        grid-row: 3 / span 1;
-        border-bottom-left-radius: 1rem;
-        z-index: 500;
-    }
-    .mega-panel {
-        grid-column: 1 / span 12;
-        grid-row: 3 / span 2;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .bio, .cta {
-        height: 300px;
-        width: 570px;
-    }
-    
-    .bio {
-        grid-column: 1 / span 1;
-        background-image: url('https://edcharbeneau.com/img/ed-speaking1.jpg');
-        border-bottom-left-radius: 1em;
-        justify-self: flex-end;
-    }
-    .cta {
-        grid-column: 2 / span 1;
-        background-color: var(--brand-second);
-        border-bottom-right-radius: 1em;
-    }
-}
-
-.nav {
-    /* grid-area: nav; */
-    display: flex;
-    align-items: center;
-
-}
-    
-.nav ul {
-    margin:0;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.cta {
+    background-color: var(--brand-second);
+    border-bottom-right-radius: 1em;
 }
 
 .nav a {
-    display: block;
-    padding: .5rem 1rem;
-    border-radius: .25rem;
-    white-space: nowrap;
     text-transform: uppercase;
     color: var(--white);
     text-decoration: none;
+    border-radius: .25rem;
 }
 
 .nav a:hover {
