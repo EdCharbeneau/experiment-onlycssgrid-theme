@@ -1,3 +1,4 @@
+/* justify-self: end; */
 header.page-header {
     display: grid;
     grid-template-columns: fr;
@@ -34,7 +35,7 @@ header.page-header {
         grid-column: span 12;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 40px 40px 40px 300px;
+        grid-template-rows: 40px 40px 40px 260px;
     }
     
     .logo {
@@ -54,7 +55,6 @@ header.page-header {
         visibility: visible;
     }
     .nav-top {
-        /* grid-area: nav-top; */
         grid-column: 6 / span 12;
         grid-row: 1 / span 1;
     }
@@ -64,29 +64,33 @@ header.page-header {
         border-radius: 0;
     }
     .nav-bottom {
-        /* grid-area: nav-bottom; */
         grid-column: 6 / span 12;
         grid-row: 3 / span 1;
         border-bottom-left-radius: 1rem;
         z-index: 500;
     }
+    .mega-panel {
+        grid-column: 1 / span 12;
+        grid-row: 3 / span 2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
     .bio, .cta {
         height: 300px;
+        width: 570px;
     }
     
     .bio {
-        grid-row: 3 / span 1;
-        grid-column: 2 / span 5;
+        grid-column: 1 / span 1;
         background-image: url('https://edcharbeneau.com/img/ed-speaking1.jpg');
         border-bottom-left-radius: 1em;
+        justify-self: flex-end;
     }
     .cta {
-        grid-row: 3 / span 1;
-        grid-column: 7 / span 5;
+        grid-column: 2 / span 1;
         background-color: var(--brand-second);
         border-bottom-right-radius: 1em;
     }
-    
 }
 
 .nav {
