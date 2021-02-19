@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-@import url('page-home.css');
 @import url('variables.css');
+@import url('typebase.css');
+@import url('page-home.css');
 @import url('page-header.css');
 @import url('page-main.css');
 @import url('page-footer.css');
+@import url('cards.css');
+@import url('buttons.css');

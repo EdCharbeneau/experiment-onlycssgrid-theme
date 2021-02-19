@@ -1,13 +1,60 @@
 :root {
+    --brand-primary-h: 16; /* Hue        */
+    --brand-primary-s: 75%; /* Saturation */
+    --brand-primary-l: 51%; /* Lightness  */
+
+    --brand-third-h: 288; /* Hue        */
+    --brand-third-s: 58%; /* Saturation */
+    --brand-third-l: 36%; /* Lightness  */
     
-    --brand-primary:             #E05826;
-    --brand-second:              #0CA0C6;
-    --brand-third:               #d82c99;
+    --brand-second-h: 192; /* Hue        */
+    --brand-second-s: 89%; /* Saturation */
+    --brand-second-l: 41%; /* Lightness  */
+
+    --brand-primary:  hsl(
+        var(--brand-primary-h), 
+        var(--brand-primary-s), 
+        var(--brand-primary-l) 
+      );
+
+    --brand-primary-darker: hsl(
+        var(--brand-primary-h), 
+        var(--brand-primary-s), 
+        calc(var(--brand-primary-l) - var(--brand-primary-l) * 0.3 ) 
+      );
+      
+      --brand-second:  hsl(
+        var(--brand-second-h), 
+        var(--brand-second-s), 
+        var(--brand-second-l) 
+      );
+
+    --brand-second-darker: hsl(
+        var(--brand-second-h), 
+        var(--brand-second-s), 
+        calc(var(--brand-second-l) - var(--brand-second-l) * 0.3 ) 
+      );
+
+      --brand-third:  hsl(
+        var(--brand-third-h), 
+        var(--brand-third-s), 
+        var(--brand-third-l) 
+      );
+
+    --brand-second-darker: hsl(
+        var(--brand-third-h), 
+        var(--brand-third-s), 
+        calc(var(--brand-third-l) - var(--brand-third-l) * 0.3 ) 
+      );
+
+    /* --brand-second:              #0CA0C6; */
+    /* --brand-third:               #d82c99; */
     --brand-success:             #5cb85c;
     --brand-info:                #0CA0C6;
     --brand-warning:             #f0ad4e;
     --brand-danger:              #7C2791;
     --brand-inverse:             var(--gray-dark);
+    --brand-background:          var(--gray-lightest);
 
     --gray-dark:                 #373a3c ;
     --gray:                      #55595c ;
@@ -22,13 +69,7 @@
     --text-color: #444;
     --text-color-light: #999;
     --border-color: #E6E6E6;
-
-/* Unfortunately CSS does not support var in a media query definition 
-
-@media only screen and (min-width: 1200px) { }
-@media only screen and (min-width: 768px) { }
-@media only screen and (min-width: 768px) { }
-
-*/
+    
+    
 
 }
